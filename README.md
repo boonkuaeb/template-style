@@ -1,11 +1,10 @@
-##Template and Styling
+**Template and Styling**
 
 This repository holds the code for Symfony 4 and Webpack.
 
-[Demo](https://damp-citadel-56736.herokuapp.com/)
+[Demo Site](https://damp-citadel-56736.herokuapp.com/)
 
-
-To get it working, follow these steps:
+To get it working on your environment, Please follow these steps.:
 
 **Download Composer dependencies**
 
