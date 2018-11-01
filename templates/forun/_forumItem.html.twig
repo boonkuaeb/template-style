@@ -1,0 +1,31 @@
+    <div class="col-md-8">
+        <div class="media">
+            {#<img class="forum-mr-3 mr-3 img-fluid img-thumbnail" src="{{ post.image_url }}" alt="{{ post.title }}">#}
+            <img class="forum-mr-3 mr-3 img-fluid img-thumbnail" src="http://www.tompetty.com/sites/g/files/g2000007521/f/sample001.jpg" alt="{{ post.title }}">
+            <div class="media-body">
+                <h4 class="mt-0">{{ post.title }}</h4>
+                <p>{{ post.body }}</p>
+                <p>
+                    <i class="fa fa-clock"></i> {{ post.created_at|capitalize }}
+                </p>
+            </div>
+        </div>
+    </div>
+    {% if post.author_name is not none %}
+    <div class="col-md-4 offset-md-0">
+
+        <div class="card forum-card">
+            <div class="text-center">
+                <img class="card-img-top forum-card-img-top  rounded-circle img-fluid img-thumbnail"
+                     src="{{ post.author_avatar_url }}"
+                     alt="{{ post.author_name }}">
+            </div>
+
+            <div class="card-body forum-card-body">
+                <h4 class="card-title red-text">{{ post.author_name }}</h4>
+                <p class="card-text">{{ post.author_role }}</p>
+                <p><i class="fa fa-map-marker-alt"></i> {{ post.author_place }}</p>
+            </div>
+        </div>
+    </div>
+    {% endif %}

@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('build/homepage.css') }}"/>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('build/homepage.js') }}"></script>
+{% endblock %}
+
+
+{% block body %}
+    <div>
+        <h1>Forum</h1>
+        <p>Post</p>
+    </div>
+    <div>
+        {% set bg = 'bg-white' %}
+        {% for post in posts %}
+            <div class="row clearfix forum-item shadow {{ bg }} p-3 mb-5 rounded">
+                {% include 'forun/_forumItem.html.twig' %}
+            </div>
+            {% if bg =='bg-white' %}
+                {% set bg = 'bg-light' %}
+            {% else %}
+                {% set bg = 'bg-white' %}
+            {% endif %}
+
+        {% endfor %}
+
+        {% include 'forun/_page.html.twig' %}
+
+    </div>
+
+
+{% endblock %}

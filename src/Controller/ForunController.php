@@ -9,17 +9,19 @@
 namespace App\Controller;
 
 
+use App\Services\ForumService;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class ForunController
+class ForunController extends AbstractController
 {
-
     /**
      * @Route("/")
      */
-    public function homepage()
+    public function homepage(ForumService $forumService)
     {
-        return new Response('OMG! My first page already! WOOO!');
+        /** @var ForumService $forumService */
+        $posts = $forumService->getForum();
+        return $this->render('forun/homepage.html.twig',['posts'=>$posts]);
     }
 }
