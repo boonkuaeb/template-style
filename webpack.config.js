@@ -1,10 +1,29 @@
-var Encore = require('@symfony/webpack-encore');
+// webpack.config.js
+const Encore = require('@symfony/webpack-encore');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
+
+let build_env = 'dev';
+let is_production_patt = /production/;
+let string_build = process.argv[2];
+if (is_production_patt.test(string_build)) {
+    build_env = 'production';
+}
+
+console.log('build ' + build_env);
+
 
 Encore
-    // directory where compiled assets will be stored
+
+// Env
+    .configureRuntimeEnvironment(build_env)
+
+    // the project directory where all compiled assets will be stored
     .setOutputPath('public/build/')
-    // public path used by the web server to access the output path
+
+    // the public path used by the web server to access the previous directory
     .setPublicPath('/build')
+
     // only needed for CDN's or sub-directory deploy
     //.setManifestKeyPrefix('build/')
 
@@ -20,29 +39,23 @@ Encore
     .addEntry('app', './assets/js/app.js')
     .addEntry('homepage', './assets/js/components/forum/homepage.js')
 
-
-    /*
-     * FEATURE CONFIG
-     *
-     * Enable & configure other features below. For a full
-     * list of features, see:
-     * https://symfony.com/doc/current/frontend.html#adding-more-features
-     */
-    .cleanupOutputBeforeBuild()
     .enableBuildNotifications()
-    .enableSourceMaps(!Encore.isProduction())
-    // enables hashed filenames (e.g. app.abc123.css)
-    // .enableVersioning(Encore.isProduction())
-    .enableVersioning()
-
-    // enables Sass/SCSS support
-    //.enableSassLoader()
-
-    // uncomment if you use TypeScript
-    //.enableTypeScriptLoader()
-
-    // uncomment if you're having problems with a jQuery plugin
+    // fixes modules that expect jQuery to be global
     .autoProvidejQuery()
+
+    .addPlugin(
+        new UglifyJsPlugin({
+            include: /\.min\.js$/,
+            minimize: true
+        })
+    )
+
+    .enableSassLoader()
+    .enableSourceMaps(!Encore.isProduction())
+    .cleanupOutputBeforeBuild()
+    .enableVersioning()
+    .enableReactPreset()
 ;
 
+// export the final configuration
 module.exports = Encore.getWebpackConfig();

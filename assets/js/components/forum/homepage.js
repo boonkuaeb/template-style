@@ -3,3 +3,5 @@ import '../../../../node_modules/mdbootstrap/css/mdb.min.css';
 import './homepage.css';
 
 import '../../../../node_modules/mdbootstrap/js/mdb.min';
+
+export default function () {}
