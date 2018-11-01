@@ -17,6 +17,3 @@
 npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-pack ###
-composer.lock
-yarn.lock
-symfony.lock
