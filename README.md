@@ -12,6 +12,8 @@ Make sure you have [Composer installed](https://getcomposer.org/download/)
 and then run:
 
 ```bash
+git clone git@github.com:boonkuaeb/template-style.git 
+cd template-style
 php -d memory_limit=-1 composer.phar install
 ```
 
