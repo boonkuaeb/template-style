@@ -2,13 +2,13 @@
 
 This repository holds the code for Symfony 4 and Webpack.
 
-[Demo Site](https://damp-citadel-56736.herokuapp.com/){:target="_blank"}
+[Demo Site](https://damp-citadel-56736.herokuapp.com/)
 
 To get it working on your environment, Please follow these steps.:
 
 **Download Composer dependencies**
 
-Make sure you have [Composer installed](https://getcomposer.org/download/){:target="_blank"}
+Make sure you have [Composer installed](https://getcomposer.org/download/)
 and then run:
 
 ```bash
