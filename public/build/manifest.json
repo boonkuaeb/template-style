@@ -1,6 +1,6 @@
 {
   "build/app.css": "/build/app.5234d38f.css",
-  "build/app.js": "/build/app.25cd78ea.js",
+  "build/app.js": "/build/app.74699104.js",
   "build/fonts/Roboto-Bold.eot": "/build/fonts/Roboto-Bold.ecdd509c.eot",
   "build/fonts/Roboto-Bold.ttf": "/build/fonts/Roboto-Bold.e31fcf18.ttf",
   "build/fonts/Roboto-Bold.woff": "/build/fonts/Roboto-Bold.dc81817d.woff",
@@ -34,7 +34,7 @@
   "build/fonts/fa-solid-900.woff": "/build/fonts/fa-solid-900.09bc9e8c.woff",
   "build/fonts/fa-solid-900.woff2": "/build/fonts/fa-solid-900.fd531d21.woff2",
   "build/homepage.css": "/build/homepage.055708fd.css",
-  "build/homepage.js": "/build/homepage.be16ed63.js",
+  "build/homepage.js": "/build/homepage.f0309b35.js",
   "build/images/01.png": "/build/images/01.0a3750e6.png",
   "build/images/02.png": "/build/images/02.351bd682.png",
   "build/images/03.png": "/build/images/03.e438ea2a.png",
@@ -48,5 +48,6 @@
   "build/images/arrow_right.svg": "/build/images/arrow_right.8ef6a08c.svg",
   "build/images/fa-brands-400.svg": "/build/images/fa-brands-400.3f4d4ad4.svg",
   "build/images/fa-regular-400.svg": "/build/images/fa-regular-400.b5a61b22.svg",
-  "build/images/fa-solid-900.svg": "/build/images/fa-solid-900.3f759796.svg"
+  "build/images/fa-solid-900.svg": "/build/images/fa-solid-900.3f759796.svg",
+  "build/manifest.js": "/build/manifest.d41d8cd9.js"
 }
