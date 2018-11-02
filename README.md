@@ -17,7 +17,7 @@ php -d memory_limit=-1 composer.phar install
 
 Open your terminal, go to the source code directory and run `mv` command to create `.env` file.
 ```bash
-mv .env.dist .env
+cp .env.dist .env
 ``` 
 
 **Build your Assets**
@@ -29,6 +29,7 @@ run encore:
 yarn install
 yarn run encore dev --watch
 ```
+Note: Make sure you already install NodeJs on your environment.
 
 **Start the built-in web server**
 
