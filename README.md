@@ -37,8 +37,6 @@ yarn build
 You can use Nginx or Apache, but the built-in web server works
 great:
 
-Open the new terminal tab
-
 ```bash
 php bin/console server:run
 ```
