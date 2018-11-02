@@ -21,15 +21,14 @@ cp .env.dist .env
 ``` 
 
 **Build your Assets**
-
+Please make sure you already have installed NodeJs on your environment.
 To build your assets, install the dependencies with yarn and then
 run encore:
 
-```
+```bash
 yarn install
 yarn run encore dev --watch
 ```
-Note: Make sure you already install NodeJs on your environment.
 
 **Start the built-in web server**
 
