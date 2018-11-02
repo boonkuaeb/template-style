@@ -32,7 +32,7 @@ cp .env.dist .env
 
 Please make sure you already have installed NodeJs on your environment.
 To build a assets, install the dependencies with `yarn install` and then
-run `yarn build` for to generate CSS and JS files to `public/build` folder:
+run `yarn build` to generate CSS and JS files to `public/build` folder:
 
 ```bash
 yarn install
