@@ -29,7 +29,7 @@ run encore:
 
 ```bash
 yarn install
-yarn run encore build
+yarn build
 ```
 
 **Start the built-in web server**
