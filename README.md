@@ -12,6 +12,8 @@ Make sure you have [Composer installed](https://getcomposer.org/download/)
 and then run:
 
 ```bash
+git clone git@github.com:boonkuaeb/template-style.git 
+cd template-style
 php -d memory_limit=-1 composer.phar install
 ```
 
@@ -27,13 +29,15 @@ run encore:
 
 ```bash
 yarn install
-yarn run encore dev --watch
+yarn build
 ```
 
 **Start the built-in web server**
 
 You can use Nginx or Apache, but the built-in web server works
 great:
+
+Open the new terminal tab
 
 ```bash
 php bin/console server:run
